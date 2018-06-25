@@ -29,7 +29,7 @@ matrix:
         - TARGET=x86_64-unknown-linux-musl
         - NAME=linux64
         - EXT=tar.gz
-      dist: trusty
+      dist: xenial
       sudo: required
       addons:
         apt:
@@ -41,14 +41,14 @@ matrix:
         - TARGET=i686-unknown-linux-musl
         - NAME=linux32
         - EXT=tar.gz
-      dist: trusty
+      dist: xenial
       sudo: required
     - os: linux
       env:
         - TARGET=x86_64-pc-windows-gnu
         - NAME=win64
         - EXT=zip
-      dist: trusty
+      dist: xenial
       sudo: required
       addons:
         apt:
@@ -62,8 +62,8 @@ matrix:
         - NAME=win32
         - EXT=zip
         - TOOLCHAIN=nightly
-        - DOCKER_IMAGE=i686-trusty
-      dist: trusty
+        - DOCKER_IMAGE=i686-xenial
+      dist: xenial
       services:
         - docker
     - os: osx
